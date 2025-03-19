@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "Base multi project for cobblemon",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "sources": "TODO",
+    "issues": "TODO"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "com.basemultiproject.fabric.BaseProject"
+      }
+    ],
+    "client": [
+      {
+        "value": "com.basemultiproject.fabric.BaseProjectClient"
+      }
+    ]
+  },
+  "depends": {
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "architectury": "${architectury_version}.x",
+    "cobblemon": ">=${cobblemon_version}"
+  }
+}

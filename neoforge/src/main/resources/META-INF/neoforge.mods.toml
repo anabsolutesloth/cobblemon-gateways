@@ -1,0 +1,37 @@
+modLoader = "javafml"
+loaderVersion = "[4.0.24,)"
+issueTrackerURL = ""
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${version}"
+displayName = "${mod_name}"
+authors = [
+    "${mod_authors}"
+]
+description = '''
+${mod_description}
+'''
+# logo file optional
+# logoFile = "assets/basemultiproject/icon.png"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+mandatory = true
+versionRange = "[${loader_version},)"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${minecraft_version}]"
+
+#[[dependencies.${mod_id}]]
+#modId = "architectury"
+#mandatory = true
+#versionRange = "[${architectury_version},)"
+
+[[dependencies.${mod_id}]]
+modId = "cobblemon"
+mandatory = true
+versionRange = "[${cobblemon_version},)"
