@@ -8,8 +8,6 @@ architectury {
 }
 
 repositories {
-    maven("https://thedarkcolour.github.io/KotlinForForge/")
-    maven("https://maven.shadowsoffire.dev/releases/")
     maven("https://maven.blamejared.com")
 }
 
@@ -26,7 +24,7 @@ dependencies {
 
     modImplementation(libs.cobblemon.neoforge)
 
-    modImplementation("dev.shadowsoffire:GatewaysToEternity:${libs.minecraft.get().version}-5.0.2")
+    //modImplementation("dev.shadowsoffire:GatewaysToEternity:${libs.minecraft.get().version}-5.0.2")
 }
 
 tasks {
@@ -42,11 +40,11 @@ tasks {
         inputs.property("architectury_version", architecturyVersion)
         inputs.property("cobblemon_version", cobblemonVersion)
         inputs.property("version", rootProject.version)
-        inputs.property("mod_authors", rootProject.property("authors"))
-        inputs.property("mod_name", rootProject.property("modName"))
-        inputs.property("mod_license", rootProject.property("modLicense"))
-        inputs.property("mod_description", rootProject.property("modDescription"))
-        inputs.property("mod_id", rootProject.property("modId"))
+        inputs.property("mod_authors", rootProject.property("mod_authors"))
+        inputs.property("mod_name", rootProject.property("mod_name"))
+        inputs.property("mod_license", rootProject.property("mod_license"))
+        inputs.property("mod_description", rootProject.property("mod_description"))
+        inputs.property("mod_id", rootProject.property("mod_id"))
 
         filesMatching("META-INF/neoforge.mods.toml") {
             expand(
@@ -56,11 +54,11 @@ tasks {
                 "loader_version" to neoforgeVersion,
                 "minecraft_version" to libs.minecraft.get().version,
                 "cobblemon_version" to cobblemonVersion,
-                "mod_authors" to rootProject.property("authors"),
-                "mod_name" to rootProject.property("modName"),
-                "mod_license" to rootProject.property("modLicense"),
-                "mod_description" to rootProject.property("modDescription"),
-                "mod_id" to rootProject.property("modId")
+                "mod_authors" to rootProject.property("mod_authors"),
+                "mod_name" to rootProject.property("mod_name"),
+                "mod_license" to rootProject.property("mod_license"),
+                "mod_description" to rootProject.property("mod_description"),
+                "mod_id" to rootProject.property("mod_id")
             )
         }
     }

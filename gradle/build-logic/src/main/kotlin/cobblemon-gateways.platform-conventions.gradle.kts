@@ -14,7 +14,7 @@ dependencies {
 
 tasks {
     jar {
-        archiveBaseName.set("BaseProject-${project.name}")
+        archiveBaseName.set("cobblemon-gateways-${project.name}")
         archiveClassifier.set("dev")
     }
 

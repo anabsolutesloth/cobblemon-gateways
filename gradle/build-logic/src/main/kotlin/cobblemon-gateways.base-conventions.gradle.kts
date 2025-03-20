@@ -12,6 +12,7 @@ plugins {
 repositories {
     maven("https://maven.impactdev.net/repository/development/")
     maven("https://maven.neoforged.net/releases")
+    maven("https://maven.shadowsoffire.dev/releases/")
 }
 
 java {
@@ -43,7 +44,7 @@ loom {
 dependencies {
     minecraft(libs.minecraft)
     mappings(loom.layered {
-        officialMojangMappings()
+        loom.officialMojangMappings()
         parchment(libs.parchment)
     })
 
